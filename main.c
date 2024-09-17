@@ -70,18 +70,29 @@ int main(int argc, char *argv[]) {
         SDL_SetRenderDrawColor(renderer, 0x00, 0x00, 0x00, 0xFF);
         SDL_RenderClear(renderer);
 
+        calculaSiguiente(MCelulas);
+
         for(i = 0; i<WIDTH; i++) {
             for(j = 0; j<HEIGHT; j++) {
-                if(MCelulas[i][j]==1) {
 
+                if(MCelulas[i][j]!=0) {
                     fillRect.x = (i*10);
                     fillRect.y = (j*10);
+                    fillRect.h = 3;
+                    fillRect.w = 3;
+                }
+
+                if(MCelulas[i][j]==1) {
                     fillRect.h = 10;
                     fillRect.w = 10;
-
                     SDL_SetRenderDrawColor(renderer, 0xFF, 0xFF, 0xFF, 0xFF);
-                    SDL_RenderFillRect(renderer, &fillRect);
                 }
+                if(MCelulas[i][j]==2)
+                    SDL_SetRenderDrawColor(renderer, 0x80, 0x80, 0x80, 0xFF);
+                if(MCelulas[i][j]==3)
+                    SDL_SetRenderDrawColor(renderer, 0x00, 0xFF, 0x00, 0x40);
+
+                SDL_RenderFillRect(renderer, &fillRect);
             }
         }
         SDL_RenderPresent(renderer);
@@ -97,7 +108,6 @@ int main(int argc, char *argv[]) {
         if(skip<k)
             SDL_Delay(delay);
 
-        calculaSiguiente(MCelulas);
         aplicaSiguiente(MCelulas);
     }
 
