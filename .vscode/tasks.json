@@ -3,13 +3,13 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "C/C++: gcc.exe build active file",
-            "command": "C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gcc.exe",
+            "label": "C/C++: gcc.exe build",
+            "command": "<path to gcc.exe>",
             "args": [
                 "-fdiagnostics-color=always",
                 "-g",
-                "-ID:\\DESCARGAS\\TP_Conway_Template\\SDL2\\include\\SDL2",
-                "-LD:\\DESCARGAS\\TP_Conway_Template\\SDL2\\lib",
+                "-I${workspaceFolder}\\SDL2\\include\\SDL2",
+                "-L${workspaceFolder}\\SDL2\\lib",
                 "funciones.c",
                 "precargas.c",
                 "main.c",
@@ -23,8 +23,7 @@
             "problemMatcher": [
                 "$gcc"
             ],
-            "group": "build",
-            "detail": "compiler: C:\\Program Files\\CodeBlocks\\MinGW\\bin\\gcc.exe"
+            "group": "build"
         }
     ]
 }
