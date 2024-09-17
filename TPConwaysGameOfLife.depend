@@ -400,7 +400,7 @@
 	"begin_code.h"
 	"close_code.h"
 
-1726602984 source:d:\descargas\tp_conway_template\main.c
+1726607437 source:d:\descargas\tp_conway_template\main.c
 	"constants.h"
 	"precargas.h"
 	"funciones.h"
@@ -802,7 +802,7 @@
 1726603348 source:d:\descargas\tp_conway_template\funciones.c
 	"constants.h"
 
-1726603316 d:\descargas\tp_conway_template\constants.h
+1726604707 d:\descargas\tp_conway_template\constants.h
 	<stdio.h>
 	<stdlib.h>
 	<unistd.h>
